@@ -1,0 +1,1324 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PixBB.Core</name>
+    </assembly>
+    <members>
+        <member name="T:PixBB.Core.Constants.PixScopes">
+            <summary>
+            Classe com variaveis constantes de permissões
+            </summary>
+        </member>
+        <member name="F:PixBB.Core.Constants.PixScopes.CobWrite">
+            <summary>
+            Permissão para alteração de cobranças
+            </summary>
+        </member>
+        <member name="F:PixBB.Core.Constants.PixScopes.CobRead">
+            <summary>
+            Permissão para consulta de cobranças
+            </summary>
+        </member>
+        <member name="F:PixBB.Core.Constants.PixScopes.CobVWrite">
+            <summary>
+            Permissão para alteração de cobranças com vencimento
+            </summary>
+        </member>
+        <member name="F:PixBB.Core.Constants.PixScopes.CobVRead">
+            <summary>
+            Permissão para consulta de cobranças com vencimento
+            </summary>
+        </member>
+        <member name="F:PixBB.Core.Constants.PixScopes.PixRead">
+            <summary>
+            Permissão para consulta de pix
+            </summary>
+        </member>
+        <member name="F:PixBB.Core.Constants.PixScopes.PixWrite">
+            <summary>
+            Permissão para alteração de PixPaid
+            </summary>
+        </member>
+        <member name="F:PixBB.Core.Constants.PixScopes.LoteCobVRead">
+            <summary>
+            Permissão para consulta de lotes de cobranças com vencimento
+            </summary>
+        </member>
+        <member name="F:PixBB.Core.Constants.PixScopes.LoteCobVWrite">
+            <summary>
+            Permissão para alteração de lotes de cobranças com vencimento
+            </summary>
+        </member>
+        <member name="F:PixBB.Core.Constants.PixScopes.WebhookRead">
+            <summary>
+            Permissão para consulta do webhook
+            </summary>
+        </member>
+        <member name="F:PixBB.Core.Constants.PixScopes.WebhookWrite">
+            <summary>
+            Permissão para alteração do webhook
+            </summary>
+        </member>
+        <member name="F:PixBB.Core.Constants.PixScopes.PayloadLocationRead">
+            <summary>
+            Permissão para consulta de payloads
+            </summary>
+        </member>
+        <member name="F:PixBB.Core.Constants.PixScopes.PayloadLocationWrite">
+            <summary>
+            Permissão para alteração de payloads
+            </summary>
+        </member>
+        <member name="T:PixBB.Core.Converters.BillingStatusConverter">
+            <summary>
+            Classe para conversão do enumerador <see cref="T:PixBB.Core.Enumerators.BillingStatus"/> para json e vice-versa.
+            </summary>
+        </member>
+        <member name="M:PixBB.Core.Converters.BillingStatusConverter.CanConvert(System.Type)">
+            <summary>
+            Método que valida se o tipo informado pode ser convertido.
+            </summary>
+            <param name="objectType">Tipo do objeto à ser convertido.</param>
+            <returns>Verdadeiro caso o objeto possa ser convertido e falso caso contrário.</returns>
+        </member>
+        <member name="M:PixBB.Core.Converters.BillingStatusConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            Método que transforma o valor json no objeto referente.
+            </summary>
+            <param name="reader">Leitor do arquivo json.</param>
+            <param name="objectType">tipo do objeto à ser convertido.</param>
+            <param name="existingValue">Valor existente.</param>
+            <param name="serializer">Serializador json.</param>
+            <returns>Objeto referente ao valor informado.</returns>
+        </member>
+        <member name="M:PixBB.Core.Converters.BillingStatusConverter.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            Método que transforma o objeto em sua representação json referente.
+            </summary>
+            <param name="writer">Escritor do arquivo json.</param>
+            <param name="value">Objeto à ser traduzido.</param>
+            <param name="serializer">Serializador json.</param>
+        </member>
+        <member name="T:PixBB.Core.Converters.BillingTypeConverter">
+            <summary>
+            Classe para conversão do enumerador <see cref="T:PixBB.Core.Enumerators.BillingType"/> para json e vice-versa.
+            </summary>
+        </member>
+        <member name="M:PixBB.Core.Converters.BillingTypeConverter.CanConvert(System.Type)">
+            <summary>
+            Método que valida se o tipo informado pode ser convertido.
+            </summary>
+            <param name="objectType">Tipo do objeto à ser convertido.</param>
+            <returns>Verdadeiro caso o objeto possa ser convertido e falso caso contrário.</returns>
+        </member>
+        <member name="M:PixBB.Core.Converters.BillingTypeConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            Método que transforma o valor json no objeto referente.
+            </summary>
+            <param name="reader">Leitor do arquivo json.</param>
+            <param name="objectType">tipo do objeto à ser convertido.</param>
+            <param name="existingValue">Valor existente.</param>
+            <param name="serializer">Serializador json.</param>
+            <returns>Objeto referente ao valor informado.</returns>
+        </member>
+        <member name="M:PixBB.Core.Converters.BillingTypeConverter.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            Método que transforma o objeto em sua representação json referente.
+            </summary>
+            <param name="writer">Escritor do arquivo json.</param>
+            <param name="value">Objeto à ser traduzido.</param>
+            <param name="serializer">Serializador json.</param>
+        </member>
+        <member name="T:PixBB.Core.Converters.DateFormatConverter">
+            <summary>
+            Classe responsável pela conversão da data para um formato específico.
+            </summary>
+        </member>
+        <member name="M:PixBB.Core.Converters.DateFormatConverter.#ctor(System.String)">
+            <summary>
+            Inicializa uma nova instância da classe <see cref="T:PixBB.Core.Converters.DateFormatConverter"/>.
+            </summary>
+            <param name="format">Formado de data desejado.</param>
+        </member>
+        <member name="T:PixBB.Core.Converters.DecimalFormatConverter">
+            <summary>
+            Classe responsável pela conversão de valores decimais.
+            </summary>
+        </member>
+        <member name="M:PixBB.Core.Converters.DecimalFormatConverter.CanConvert(System.Type)">
+            <summary>
+            Método que valida se o tipo informado pode ser convertido.
+            </summary>
+            <param name="objectType">Tipo do objeto à ser convertido.</param>
+            <returns>Verdadeiro caso o objeto possa ser convertido e falso caso contrário.</returns>
+        </member>
+        <member name="M:PixBB.Core.Converters.DecimalFormatConverter.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            Método que transforma o objeto em sua representação json referente.
+            </summary>
+            <param name="writer">Escritor do arquivo json.</param>
+            <param name="value">Objeto à ser traduzido.</param>
+            <param name="serializer">Serializador json.</param>
+        </member>
+        <member name="M:PixBB.Core.Converters.DecimalFormatConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            Método que transforma o valor json no objeto referente.
+            </summary>
+            <param name="reader">Leitor do arquivo json.</param>
+            <param name="objectType">tipo do objeto à ser convertido.</param>
+            <param name="existingValue">Valor existente.</param>
+            <param name="serializer">Serializador json.</param>
+            <returns>Objeto referente ao valor informado.</returns>
+        </member>
+        <member name="T:PixBB.Core.Converters.ReturnStatusConverter">
+            <summary>
+            Classe para conversão do enumerador <see cref="T:PixBB.Core.Enumerators.ReturnStatus"/> para json e vice-versa.
+            </summary>
+        </member>
+        <member name="M:PixBB.Core.Converters.ReturnStatusConverter.CanConvert(System.Type)">
+            <summary>
+            Método que valida se o tipo informado pode ser convertido.
+            </summary>
+            <param name="objectType">Tipo do objeto à ser convertido.</param>
+            <returns>Verdadeiro caso o objeto possa ser convertido e falso caso contrário.</returns>
+        </member>
+        <member name="M:PixBB.Core.Converters.ReturnStatusConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            Método que transforma o valor json no objeto referente.
+            </summary>
+            <param name="reader">Leitor do arquivo json.</param>
+            <param name="objectType">tipo do objeto à ser convertido.</param>
+            <param name="existingValue">Valor existente.</param>
+            <param name="serializer">Serializador json.</param>
+            <returns>Objeto referente ao valor informado.</returns>
+        </member>
+        <member name="M:PixBB.Core.Converters.ReturnStatusConverter.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            Método que transforma o objeto em sua representação json referente.
+            </summary>
+            <param name="writer">Escritor do arquivo json.</param>
+            <param name="value">Objeto à ser traduzido.</param>
+            <param name="serializer">Serializador json.</param>
+        </member>
+        <member name="T:PixBB.Core.Enumerators.ApiEnvironment">
+            <summary>
+            Enumerador com os tipos de ambiente disponíveis no serviço.
+            </summary>
+        </member>
+        <member name="F:PixBB.Core.Enumerators.ApiEnvironment.Sandbox">
+            <summary>
+            Ambiente de testes e/ou desenvolvimento.
+            </summary>
+        </member>
+        <member name="F:PixBB.Core.Enumerators.ApiEnvironment.Production">
+            <summary>
+            Ambiente de produção.
+            </summary>
+        </member>
+        <member name="T:PixBB.Core.Enumerators.ApiVersion">
+            <summary>
+            Enumerador com as versões disponíveis da API do PIX.
+            </summary>
+        </member>
+        <member name="F:PixBB.Core.Enumerators.ApiVersion.V1">
+            <summary>
+            Versão 1
+            </summary>
+        </member>
+        <member name="T:PixBB.Core.Enumerators.BillingStatus">
+            <summary>
+            Enum contendo os status de cobrança
+            </summary>
+        </member>
+        <member name="F:PixBB.Core.Enumerators.BillingStatus.Active">
+            <summary>
+            Cobrança ativa
+            </summary>
+        </member>
+        <member name="F:PixBB.Core.Enumerators.BillingStatus.Completed">
+            <summary>
+            Cobrança concluida
+            </summary>
+        </member>
+        <member name="F:PixBB.Core.Enumerators.BillingStatus.RemovedByRecipientUser">
+            <summary>
+            Removida pelo usuário recebedor
+            </summary>
+        </member>
+        <member name="F:PixBB.Core.Enumerators.BillingStatus.RemovedByPsp">
+            <summary>
+            Removida pelo usuário PSP
+            </summary>
+        </member>
+        <member name="T:PixBB.Core.Enumerators.BillingType">
+            <summary>
+            Enum contendo os tipos de cobrança
+            </summary>
+        </member>
+        <member name="F:PixBB.Core.Enumerators.BillingType.CobrancaImediata">
+            <summary>
+            Cobranças imediatas
+            </summary>
+        </member>
+        <member name="F:PixBB.Core.Enumerators.BillingType.CobrancaComVencimento">
+            <summary>
+            Cobranças com vencimento
+            </summary>
+        </member>
+        <member name="T:PixBB.Core.Enumerators.MimeTypes">
+            <summary>
+            Um mapeamento do tipo de conteudo, MIME-type (Multipurpose Internet Mail Extensions).
+            </summary>
+        </member>
+        <member name="F:PixBB.Core.Enumerators.MimeTypes.Json">
+            <summary>
+            Corresponde ao tipo Json.
+            </summary>
+        </member>
+        <member name="F:PixBB.Core.Enumerators.MimeTypes.Form">
+            <summary>
+            Corresponde ao tipo Form url encoding.
+            </summary>
+        </member>
+        <member name="T:PixBB.Core.Enumerators.ReturnStatus">
+            <summary>
+            Enum contendo os status de devolução
+            </summary>
+        </member>
+        <member name="F:PixBB.Core.Enumerators.ReturnStatus.Processing">
+            <summary>
+            Em proccessamento
+            </summary>
+        </member>
+        <member name="F:PixBB.Core.Enumerators.ReturnStatus.Returned">
+            <summary>
+            Devolvido
+            </summary>
+        </member>
+        <member name="F:PixBB.Core.Enumerators.ReturnStatus.NotDone">
+            <summary>
+            Não realizado
+            </summary>
+        </member>
+        <member name="T:PixBB.Core.Exceptions.HttpException">
+            <summary>
+            Classe de exceção de requisições HTTP.
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Exceptions.HttpException.Verb">
+            <summary>
+            O método HTTP.
+            </summary> 
+        </member>
+        <member name="P:PixBB.Core.Exceptions.HttpException.Headers">
+            <summary>
+            Os cabeçalhos da solicitação enviada.
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Exceptions.HttpException.ReasonPhrase">
+            <summary>
+            Frase de motivo que normalmente é enviada pelos servidores junto com o código de status.
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Exceptions.HttpException.Uri">
+            <summary>
+            A representação da URL
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Exceptions.HttpException.Content">
+            <summary>
+            O conteudo do erro
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Exceptions.HttpException.ResponseHeaders">
+            <summary>
+            Os cabeçalhos da resposta da solicitação.
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Exceptions.HttpException.StatusCode">
+            <summary>
+            O status da requisição.
+            </summary>
+        </member>
+        <member name="M:PixBB.Core.Exceptions.HttpException.#ctor(System.Uri,System.String,System.String,System.Net.Http.Headers.HttpRequestHeaders,System.String,System.Net.HttpStatusCode,System.Net.Http.Headers.HttpResponseHeaders,System.Exception)">
+            <summary>
+            Inicializa uma nova instância da classe <see cref="T:PixBB.Core.Exceptions.HttpException"/>.
+            </summary>
+            <param name="uri">A representação da URL.</param>
+            <param name="verb">O método HTTP usado pela mensagem de solicitação.</param>
+            <param name="reasonPhrase">The reason phrase.</param>
+            <param name="headers">The headers of the request.</param>
+            <param name="content">The content.</param>
+            <param name="statusCode">The status code.</param>
+            <param name="responseHeaders">The headers of response.</param>
+            <param name="ex">The ex.</param>
+        </member>
+        <member name="T:PixBB.Core.Exceptions.PixException">
+            <summary>
+            Classe de exceção básica da biblioteca.
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Exceptions.PixException.Errors">
+            <summary>
+            Erros reportados pelo serviço.
+            </summary>
+        </member>
+        <member name="M:PixBB.Core.Exceptions.PixException.#ctor(System.String)">
+            <summary>
+            Inicializa uma nova instância da classe <see cref="T:PixBB.Core.Exceptions.PixException"/>.
+            </summary>
+            <param name="message">Mensagem à ser definida na excessão.</param>
+        </member>
+        <member name="M:PixBB.Core.Exceptions.PixException.#ctor(PixBB.Core.Exceptions.HttpException)">
+            <summary>
+            Inicializa uma nova instância da classe <see cref="T:PixBB.Core.Exceptions.PixException"/>.
+            </summary>
+            <param name="ex">Os dados da execção.</param>
+        </member>
+        <member name="T:PixBB.Core.Models.AccessToken">
+            <summary>
+            Classe contendo dados de acesso a API
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.AccessToken.Token">
+            <summary>
+            Token de autenticação
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.AccessToken.TokenType">
+            <summary>
+            Tipo de token
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.AccessToken.ExpiresIn">
+            <summary>
+            Tempo de vida do token, especificado em segundos a partir da data de autenticação. Default: 600
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.AccessToken.Scope">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:PixBB.Core.Models.Billing">
+            <summary>
+            Classe que representa os dados enviados para criação ou alteração da cobrança imediata.
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.Billing.Calendar">
+            <summary>
+            Informações a respeito de controle de tempo da cobrança.
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.Billing.TransactionId">
+            <summary>
+            Identificador da transação.
+            <para>
+            O campo txid, obrigatório, determina o identificador da transação.
+            O objetivo desse campo é ser um elemento que possibilite ao PSP do
+            recebedor apresentar ao usuário recebedor a funcionalidade de conciliação de pagamentos.
+            </para>
+            <para>
+            Na pacs.008, é referenciado como TransactionIdentification ou idConciliacaoRecebedor.
+            </para>
+            <para>
+            Em termos de fluxo de funcionamento, o txid é lido pelo aplicativo do PSP do pagador e,
+            depois de confirmado o pagamento, é enviado para o SPI via pacs.008.
+            Uma pacs.008 também é enviada ao PSP do recebedor, contendo, além de
+            todas as informações usuais do pagamento, o txid. Ao perceber um recebimento dotado de txid,
+            o PSP do recebedor está apto a se comunicar com o usuário recebedor,
+            informando que um pagamento específico foi liquidado.
+            </para>
+            <para>
+            O txid é criado exclusivamente pelo usuário recebedor e está sob sua responsabilidade.
+            O txid, no contexto de representação de uma cobrança, é único por CPF/CNPJ do usuário recebedor.
+            Cabe ao PSP recebedor validar essa regra na API PixPaid.
+            </para>
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.Billing.ImageContentQRcode">
+            <summary>
+            Texto da imagem do QR Code para usar no copia/cola.
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.Billing.Revision">
+            <summary>
+            Revisão da cobrança. Sempre começa em zero. Sempre varia em acréscimos de 1.
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.Billing.Location">
+            <summary>
+            Identificador da localização do payload.
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.Billing.LocationPayload">
+            <summary>
+            Localização do payload
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.Billing.BillingStatus">
+            <summary>
+            BillingStatus da Cobrança
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.Billing.Debtor">
+            <summary>
+            Identificam o devedor, ou seja, a pessoa ou a instituição a quem a cobrança está endereçada.
+            Não identifica, necessariamente, quem irá efetivamente realizar o pagamento.
+            Um CPF pode ser o devedor de uma cobrança, mas pode acontecer de outro CPF realizar, efetivamente, o pagamento do documento.
+            Não é permitido que o campo devedor.cpf e campo devedor.cnpj estejam preenchidos ao mesmo tempo.
+            Se o campo devedor.cnpj está preenchido, então o campo devedor.cpf não pode estar preenchido, e vice-versa.
+            Se o campo devedor.nome está preenchido, então deve existir ou um devedor.cpf ou um campo devedor.cnpj preenchido.
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.Billing.Price">
+            <summary>
+            Valores monetários referentes à cobrança.
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.Billing.Key">
+            <summary>
+            Chave DICT do recebedor
+            <remarks>
+            <para>
+            Formato do campo chave
+            </para>
+            <para>O campo chave, obrigatório, determina a chave PixPaid registrada no DICT que será utilizada para a cobrança.
+            Essa chave será lida pelo aplicativo do PSP do pagador para consulta ao DICT,
+            que retornará a informação que identificará o recebedor da cobrança.
+            </para>
+            <para>
+            Os tipos de chave podem ser: telefone, e-mail, cpf/cnpj ou EVP.
+            </para>
+            <para>
+            O formato das chaves pode ser encontrado na seção "Formatação das chaves do DICT no BR Code"
+            do Manual de Padrões para iniciação do PixPaid(https://www.bcb.gov.br/estabilidadefinanceira/pix).
+            </para>
+            </remarks>
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.Billing.PayerRequest">
+            <summary>
+            Solicitação ao pagador
+            <para>
+            O campo solicitacaoPagador, opcional, determina um texto a ser apresentado ao pagador para que
+            ele possa digitar uma informação correlata, em formato livre, a ser enviada ao recebedor.
+            Esse texto será preenchido, na pacs.008, pelo PSP do pagador, no campo RemittanceInformation.
+            O tamanho do campo na pacs.008 está limitado a 140 caracteres.
+            </para>
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.Billing.AddictionalInfo">
+            <summary>
+            Informações adicionais. Cada respectiva informação adicional contida na lista (nome e valor) deve ser apresentada ao pagador.
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.Billing.Pix">
+            <summary>
+            Dados de pagamento efetuado
+            </summary>
+        </member>
+        <member name="T:PixBB.Core.Models.Calendar">
+            <summary>
+            Classe contendo informações a respeito de controle de tempo da cobrança.
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.Calendar.Created">
+            <summary>
+            Data de Criação. Timestamp que indica o momento em que foi criada a cobrança. Respeita o formato definido na RFC 3339.
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.Calendar.Expiration">
+            <summary>
+            Tempo de vida da cobrança, especificado em segundos a partir da data de criação (Calendario.criacao). Default: 86400
+            </summary>
+        </member>
+        <member name="T:PixBB.Core.Models.Location">
+            <summary>
+            Classe contendo informações da localização do payload.
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.Location.Id">
+            <summary>
+            Id da location
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.Location.LocationPayload">
+            <summary>
+            Localização do payload. Example: http://pix.example.com/qr/v2/2353c790eefb11eaadc10242ac120002
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.Location.Type">
+            <summary>
+            Tipo da cobrança
+            </summary>
+        </member>
+        <member name="T:PixBB.Core.Models.Debtor">
+            <summary>
+            Classe contendo dados que identificam o devedor, ou seja, a pessoa ou a instituição a quem a cobrança está endereçada.
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.Debtor.Cnpj">
+            <summary>
+            CNPJ do devedor, para cobranças de pessoa juridica.
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.Debtor.Cpf">
+            <summary>
+             CPF do devedor, para cobranças de pessoa fisca.
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.Debtor.Name">
+            <summary>
+            Nome do devedor
+            </summary>
+        </member>
+        <member name="T:PixBB.Core.Models.Price">
+            <summary>
+            Valores monetários referentes à cobrança.
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.Price.Original">
+            <summary>
+            Valor original da cobrança.
+            </summary>
+        </member>
+        <member name="T:PixBB.Core.Models.AddictionalInfo">
+            <summary>
+            Classe contendo informações adicionais
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.AddictionalInfo.Name">
+            <summary>
+            Nome do campo.
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.AddictionalInfo.Content">
+            <summary>
+            Dados do campo.
+            </summary>
+        </member>
+        <member name="T:PixBB.Core.Models.PixError">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.PixError.Codigo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.PixError.Versao">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.PixError.Mensagem">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.PixError.Ocorrencia">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:PixBB.Core.Models.PixError2">
+            <summary>
+            Classe contendo mensagens de erro reportadas pelo serviço.
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.PixError2.StatusCode">
+            <summary>
+            Código HTTP do status retornado.
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.PixError2.Erro">
+            <summary>
+            Typo do erro
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.PixError2.Message">
+            <summary>
+            Mensagem do problema.
+            </summary>
+        </member>
+        <member name="T:PixBB.Core.Models.PixError3">
+            <summary>
+            Classe contendo mensagens de erro reportadas pelo serviço.
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.PixError3.Type">
+            <summary>
+            URI de referência que identifica o tipo de problema. De acordo com a RFC 7807.
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.PixError3.Title">
+            <summary>
+            Descrição resumida do problema.
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.PixError3.Status">
+            <summary>
+            Código HTTP do status retornado.
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.PixError3.Detail">
+            <summary>
+            Descrição completa do problema.
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.PixError3.Violacoes">
+            <summary>
+            Identificador de correlação do problema para fins de suporte.
+            </summary>
+        </member>
+        <member name="T:PixBB.Core.Models.Violacoes">
+            <summary>
+            Classe contendo informações do problema para fins de suporte.
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.Violacoes.Razao">
+            <summary>
+            Descrição do erro
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.Violacoes.Propriedade">
+            <summary>
+            Nome da propriedade.
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.Violacoes.Valor">
+            <summary>
+            Valor da propriedade
+            </summary>
+        </member>
+        <member name="T:PixBB.Core.Models.PixOptions">
+            <summary>
+            Classe responsavel pela configuração e preparação da comunicação da API.
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.PixOptions.DeveloperApplicationKey">
+            <summary>
+            É a credencial para acionar as APIS do Banco do Brasil.
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.PixOptions.ClientId">
+            <summary>
+            É o identificador público e único no OAuth do Banco do Brasil.
+            </summary>    
+        </member>
+        <member name="P:PixBB.Core.Models.PixOptions.ClientSecret">
+            <summary>
+            É conhecido apenas para sua aplicação e o servidor de autorização. Por isso, tome muito cuidado com seu armazenamento.
+            Em caso de suspeita de fraude, deverá acessar suas Credenciais dentro da sua Aplicação e realizar a troca do mesmo.
+            </summary>    
+        </member>
+        <member name="P:PixBB.Core.Models.PixOptions.GrantType">
+            <summary>
+            Typo de fluxo de requisição. Padrão 'client_credentials'.
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.PixOptions.Scope">
+            <summary>
+            Permissões de acesso aos recursos da API.
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.PixOptions.ApiEnvironment">
+            <summary>
+            Tipo de ambiente.
+            </summary>    
+        </member>
+        <member name="P:PixBB.Core.Models.PixOptions.ApiVersion">
+            <summary>
+            Versão da API do PIX.
+            </summary>    
+        </member>
+        <member name="P:PixBB.Core.Models.PixOptions.Certificate">
+            <summary>
+            Certficado de assinatura digital
+            </summary>
+        </member>
+        <member name="T:PixBB.Core.Models.PixPaid">
+            <summary>
+            Classe que representa os dados de um pagamento PixPaid.
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.PixPaid.EndToEndId">
+            <summary>
+            Id fim a fim da transação
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.PixPaid.TransactionId">
+            <summary>
+            Identificador da transação.
+            <para>
+            O campo txid, obrigatório, determina o identificador da transação.
+            O objetivo desse campo é ser um elemento que possibilite ao PSP do
+            recebedor apresentar ao usuário recebedor a funcionalidade de conciliação de pagamentos.
+            </para>
+            <para>
+            Na pacs.008, é referenciado como TransactionIdentification ou idConciliacaoRecebedor.
+            </para>
+            <para>
+            Em termos de fluxo de funcionamento, o txid é lido pelo aplicativo do PSP do pagador e,
+            depois de confirmado o pagamento, é enviado para o SPI via pacs.008.
+            Uma pacs.008 também é enviada ao PSP do recebedor, contendo, além de
+            todas as informações usuais do pagamento, o txid. Ao perceber um recebimento dotado de txid,
+            o PSP do recebedor está apto a se comunicar com o usuário recebedor,
+            informando que um pagamento específico foi liquidado.
+            </para>
+            <para>
+            O txid é criado exclusivamente pelo usuário recebedor e está sob sua responsabilidade.
+            O txid, no contexto de representação de uma cobrança, é único por CPF/CNPJ do usuário recebedor.
+            Cabe ao PSP recebedor validar essa regra na API PixPaid.
+            </para>
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.PixPaid.Price">
+            <summary>
+            Valor do PixPaid.
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.PixPaid.Time">
+            <summary>
+            Horário em que o PixPaid foi processado no PSP.
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.PixPaid.InfoPayer">
+            <summary>
+            Informação livre do pagador
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.PixPaid.Payer">
+            <summary>
+            Informações sobre o pagador
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.PixPaid.Devolution">
+            <summary>
+            Dados da devolução
+            </summary>
+        </member>
+        <member name="T:PixBB.Core.Models.Payer">
+            <summary>
+            Classe que representa um pagador.
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.Payer.Cnpj">
+            <summary>
+            CNPJ do devedor, para cobranças de pessoa juridica.
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.Payer.Cpf">
+            <summary>
+             CPF do devedor, para cobranças de pessoa fisca.
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.Payer.Name">
+            <summary>
+            Nome do pagador
+            </summary>
+        </member>
+        <member name="T:PixBB.Core.Models.Devolution">
+            <summary>
+            Classe que representa uma devolução.
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.Devolution.Id">
+            <summary>
+            Id gerado pelo cliente para representar unicamente uma devolução
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.Devolution.ReturnId">
+            <summary>
+            Id da devolução que transita na PACS004.
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.Devolution.Price">
+            <summary>
+            Valor a devolver
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.Devolution.TimeDevolution">
+            <summary>
+            Horário da devolução
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.Devolution.status">
+            <summary>
+            Status da devolução.
+            </summary>
+        </member>
+        <member name="T:PixBB.Core.Models.TimeDevolution">
+            <summary>
+            Classe que representa os horários da devolução.
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.TimeDevolution.Request">
+            <summary>
+            Horário no qual a devolução foi solicitada no PSP.
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.TimeDevolution.Liquidation">
+            <summary>
+            Horário no qual a devolução foi liquidada no PSP.
+            </summary>
+        </member>
+        <member name="T:PixBB.Core.Models.PixPaidResponse">
+            <summary>
+            Classe que representa os dados de retorno de um pagamento.
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.PixPaidResponse.Code">
+            <summary>
+            Codigo do pagamento
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.PixPaidResponse.EndToEndId">
+            <summary>
+            Id fim a fim da transação
+            </summary>
+        </member>
+        <member name="T:PixBB.Core.Models.ReturnBilling">
+            <summary>
+            Classe que representa uma devolução da cobrança imediata.
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.ReturnBilling.Price">
+            <summary>
+            Valor original da cobrança.
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.ReturnBilling.EndToEndId">
+            <summary>
+            Representa o ID fim a fim da transação que transita na PACS002, PACS004 e PACS008.
+            O e2eid fica disponível após uma cobrança estar concluída e você pode encontrá-lo no response da consulta da cobrança get/cob
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.ReturnBilling.Id">
+            <summary>
+            ID que representa uma devolução e é único por CPF/CNPJ do usuário recebedor.
+            O objetivo desse campo é ser um elemento que possibilite ao usuário recebedor a funcionalidade de conciliação de pagamentos.
+            O ID é criado exclusivamente pelo usuário recebedor e está sob sua responsabilidade
+            </summary>
+        </member>
+        <member name="T:PixBB.Core.Models.ReturnBillingResponse">
+            <summary>
+            Classe que representa uma devolução da cobrança imediata.
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.ReturnBillingResponse.Id">
+            <summary>
+            Id gerado pelo cliente para representar unicamente uma devolução
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.ReturnBillingResponse.ReturnId">
+            <summary>
+            Id da devolução que transita na PACS004.
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.ReturnBillingResponse.Price">
+            <summary>
+            Valor a devolver
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.ReturnBillingResponse.natureza">
+            <summary>
+            Natureza
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.ReturnBillingResponse.Description">
+            <summary>
+            Descrição
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.ReturnBillingResponse.Time">
+            <summary>
+            Horário da devolução
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.ReturnBillingResponse.Status">
+            <summary>
+            Status da devolução.
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.ReturnBillingResponse.motivo">
+            <summary>
+            Motivo
+            </summary>
+        </member>
+        <member name="T:PixBB.Core.Models.Horario">
+            <summary>
+            Classe que representa os horários da devolução.
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.Horario.Request">
+            <summary>
+            Horário no qual a devolução foi solicitada no PSP.
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Models.Horario.Liquidation">
+            <summary>
+            Horário no qual a devolução foi liquidada no PSP.
+            </summary>
+        </member>
+        <member name="T:PixBB.Core.PixClient">
+            <summary>
+            Classe que atua como cliente para os serviços pix.
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.PixClient.PixOptions">
+            <summary>
+            Chave de api usada na autenticação do serviço.
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.PixClient.AccessToken">
+            <summary>
+            Token de acesso para authenticação.
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.PixClient.AccessTokenType">
+            <summary>
+            Tipo do token de acesso.
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.PixClient.AccessExpiredToken">
+            <summary>
+            Data e hora em que o token de autenticação expira.
+            </summary>
+        </member>
+        <member name="M:PixBB.Core.PixClient.#ctor(PixBB.Core.Models.PixOptions)">
+            <summary>
+            Inicializa uma nova instância da classe <see cref="T:PixBB.Core.PixClient"/>.
+            </summary>
+            <param name="pixOptions">Chave de api usada na autenticação do serviço.</param> 
+        </member>
+        <member name="M:PixBB.Core.PixClient.Authenticated">
+            <summary> 
+            Método de autenticação da API.
+            </summary>
+            <returns>Se autenticado com sucesso</returns>
+        </member>
+        <member name="M:PixBB.Core.PixClient.AuthenticatedAsync">
+            <summary>
+            Método de autenticação da API como uma operação assíncrona.
+            </summary>
+            <returns>Se autenticado com sucesso</returns>
+        </member>
+        <member name="M:PixBB.Core.PixClient.Charge(PixBB.Core.Models.Billing)">
+            <summary>
+            Criar uma cobrança imediata, neste caso, o txid deve ser definido pelo PSP.
+            </summary>
+            <param name="billing">Dados para criação da cobrança instantânea</param>
+            <returns>Dados da cobrança</returns>
+        </member>
+        <member name="M:PixBB.Core.PixClient.ChargeAsync(PixBB.Core.Models.Billing,System.Threading.CancellationToken)">
+            <summary>
+            Criar uma cobrança imediata, neste caso, o txid deve ser definido pelo PSP como uma operação assíncrona.
+            </summary>
+            <param name="billing">Dados para criação da cobrança instantânea</param>
+            <param name="cancellationToken">Token de notificação de cancelamento de threads gerenciadas.</param>
+            <returns>Dados da cobrança</returns>
+        </member>
+        <member name="M:PixBB.Core.PixClient.GetCharge(System.String)">
+            <summary>
+            Consulta uma cobrança imediata pelo transactionId.
+            </summary>
+            <param name="transacaoId">Identificador da transação</param>
+            <returns>Dados da cobrança</returns>
+        </member>
+        <member name="M:PixBB.Core.PixClient.GetChargeAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Consulta uma cobrança imediata pelo transactionId como uma operação assíncrona.
+            </summary>
+            <param name="transacaoId">Identificador da transação</param>
+            <param name="cancellationToken">Token de notificação de cancelamento de threads gerenciadas.</param>
+            <returns>Dados da cobrança</returns>
+        </member>
+        <member name="M:PixBB.Core.PixClient.ReviewCharge(PixBB.Core.Models.Billing)">
+            <summary>
+            Atualiza uma cobrança imediata, neste caso, o txid deve ser definido pelo PSP.
+            </summary>
+            <param name="billing">Dados para criação da cobrança instantânea</param>
+            <returns>Dados da cobrança</returns>
+        </member>
+        <member name="M:PixBB.Core.PixClient.ReviewChargeAsync(PixBB.Core.Models.Billing,System.Threading.CancellationToken)">
+            <summary>
+            Atualiza uma cobrança imediata, neste caso, o txid deve ser definido pelo PSP como uma operação assíncrona.
+            </summary>
+            <param name="billing">Dados para criação da cobrança instantânea</param>
+            <param name="cancellationToken">Token de notificação de cancelamento de threads gerenciadas.</param>
+            <returns>Dados da cobrança</returns>
+        </member>
+        <member name="M:PixBB.Core.PixClient.RequestReturnBilling(PixBB.Core.Models.ReturnBilling)">
+            <summary>
+            Solicita a devolução de uma cobrança imediata, através de um e2eid do PixPaid e do ID da devolução.
+            </summary>
+            <param name="devolucao">Dados para a devolução da cobrança instantânea</param>
+            <returns>Dados da cobrança</returns>
+        </member>
+        <member name="M:PixBB.Core.PixClient.RequestReturnBillingAsync(PixBB.Core.Models.ReturnBilling,System.Threading.CancellationToken)">
+            <summary>
+            Solicita a devolução de uma cobrança imediata, através de um e2eid do PixPaid e do ID da devolução como uma operação assíncrona.
+            </summary>
+            <param name="devolucao">Dados para a devolução da cobrança instantânea</param>
+            <param name="cancellationToken">Token de notificação de cancelamento de threads gerenciadas.</param>
+            <returns>Dados da cobrança</returns>
+        </member>
+        <member name="M:PixBB.Core.PixClient.GetDevolution(PixBB.Core.Models.ReturnBilling)">
+            <summary>
+            Consulta a devolução de uma cobrança imediata, através de um e2eid do PixPaid e do ID da devolução.
+            </summary>
+            <param name="devolucao">Dados para a devolução da cobrança instantânea</param>
+            <returns>Dados da cobrança</returns>
+        </member>
+        <member name="M:PixBB.Core.PixClient.GetDevolutionAsync(PixBB.Core.Models.ReturnBilling,System.Threading.CancellationToken)">
+            <summary>
+            Consulta a devolução de uma cobrança imediata, através de um e2eid do PixPaid e do ID da devolução como uma operação assíncrona.
+            </summary>
+            <param name="devolucao">Dados para a devolução da cobrança instantânea</param>
+            <param name="cancellationToken">Token de notificação de cancelamento de threads gerenciadas.</param>
+            <returns>Dados da cobrança</returns>
+        </member>
+        <member name="M:PixBB.Core.PixClient.Pay(System.String)">
+            <summary>
+            Efetua a simulação do pagamento de um QR Code gerado em homologação.
+            Recurso exclusivo do ambiente de homologação.
+            </summary>
+            <param name="textQRCode">O Conteudo do campo <see cref="P:PixBB.Core.Models.Billing.ImageContentQRcode"/>, recebido na resposta da criação da cobrança</param>
+            <returns>Os dados de pagamento</returns>
+        </member>
+        <member name="M:PixBB.Core.PixClient.PayAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Efetua a simulação do pagamento de um QR Code gerado em homologação. Recurso exclusivo do ambiente de homologação como uma operação assíncrona.
+            </summary>
+            <param name="textQRCode">O Conteudo do campo <see cref="P:PixBB.Core.Models.Billing.ImageContentQRcode"/>, recebido na resposta da criação da cobrança</param>
+            <param name="cancellationToken">Token de notificação de cancelamento de threads gerenciadas.</param>
+            <returns>Os dados de pagamento</returns>
+        </member>
+        <member name="M:PixBB.Core.PixClient.GetPixPaid(System.String)">
+            <summary>
+            Consultar o pagamento de um cobrança, através de um e2eid do PixPaid.
+            </summary>
+            <param name="e2eId">O Id fim a fim da transação</param>
+            <returns>Dados do pagamento</returns>
+        </member>
+        <member name="M:PixBB.Core.PixClient.GetPixPaidAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Consultar o pagamento de um cobrança, através de um e2eid do PixPaid como uma operação assíncrona.
+            </summary>
+            <param name="e2eId">O Id fim a fim da transação</param>
+            <param name="cancellationToken">Token de notificação de cancelamento de threads gerenciadas.</param>
+            <returns>Dados do pagamento</returns>
+        </member>
+        <member name="M:PixBB.Core.PixClient.CreateInstance">
+            <summary>
+            Cria uma instancia de <see cref="T:PixBB.Core.Utils.PixHttpClient"/> pronta para auxiliar nas requisições via HttpClient.
+            </summary>
+            <returns>Uma instancia de <see cref="T:PixBB.Core.Utils.PixHttpClient"/></returns>
+        </member>
+        <member name="T:PixBB.Core.Utils.PixHttpClient">
+            <summary>
+            Contem metodos para realizar a comunicação via HttpClient.
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Utils.PixHttpClient.UrlBase">
+            <summary>
+            Url base para a comunicação
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Utils.PixHttpClient.Url">
+            <summary>
+            Url completa para a solicitação
+            </summary>
+        </member>
+        <member name="F:PixBB.Core.Utils.PixHttpClient._requestNotAllowedStatusRange">
+            <summary>
+            Lista de status de erro da requisição.
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Utils.PixHttpClient.AuthenticationHeader">
+            <summary>
+            Contem o tipo e a chave do token de acesso para comunicação com a API.
+            </summary>
+        </member>
+        <member name="P:PixBB.Core.Utils.PixHttpClient.Certificate">
+            <summary>
+            Certficado de assinatura digital
+            </summary>
+        </member>
+        <member name="M:PixBB.Core.Utils.PixHttpClient.#ctor(System.String)">
+            <summary>
+            Inicializa uma nova instância da classe <see cref="T:PixBB.Core.Utils.PixHttpClient"/>.
+            </summary>
+            <param name="urlBase">Url base da comunicação</param>
+        </member>
+        <member name="M:PixBB.Core.Utils.PixHttpClient.GetAsync``1(PixBB.Core.Enumerators.MimeTypes,System.Threading.CancellationToken)">
+            <summary>
+            Realiza uma consulta no endereço especificado na <see cref="P:PixBB.Core.Utils.PixHttpClient.UrlBase"/> de forma assíncrona.
+            </summary>
+            <param name="mimeType">Tipo de dados</param>
+            <param name="cancellationToken">Token de notificação de cancelamento de threads gerenciadas.</param>
+            <typeparam name="T">O tipo de dados de retorno</typeparam>
+            <returns>Os dados</returns>
+        </member>
+        <member name="M:PixBB.Core.Utils.PixHttpClient.PostAsync``1(PixBB.Core.Enumerators.MimeTypes,System.Threading.CancellationToken)">
+            <summary>
+            Realiza o envio de dados para o endereço especificado na <see cref="P:PixBB.Core.Utils.PixHttpClient.UrlBase"/> de forma assíncrona.
+            </summary>
+            <param name="mimeType">Tipo de dados</param>
+            <param name="cancellationToken">Token de notificação de cancelamento de threads gerenciadas.</param>
+            <typeparam name="T">O tipo de dados de retorno</typeparam>
+            <returns>Os dados</returns>
+        </member>
+        <member name="M:PixBB.Core.Utils.PixHttpClient.PostAsync``1(System.Object,PixBB.Core.Enumerators.MimeTypes,System.Threading.CancellationToken)">
+            <summary>
+            Realiza o envio de dados para o endereço especificado na <see cref="P:PixBB.Core.Utils.PixHttpClient.UrlBase"/> de forma assíncrona.
+            </summary>
+            <param name="obj">O objeto que sera enviado no corpo da requisição</param>
+            <param name="mimeType">Tipo de dados</param>
+            <param name="cancellationToken">Token de notificação de cancelamento de threads gerenciadas.</param>
+            <typeparam name="T">O tipo de dados de retorno</typeparam>
+            <returns>Os dados</returns>
+        </member>
+        <member name="M:PixBB.Core.Utils.PixHttpClient.DeleteAsync(System.Threading.CancellationToken)">
+            <summary>
+            Realiza o envio de um comando de DELETE para o endereço especificado na <see cref="P:PixBB.Core.Utils.PixHttpClient.UrlBase"/> de forma assíncrona.
+            </summary>
+            <param name="cancellationToken">Token de notificação de cancelamento de threads gerenciadas.</param>
+        </member>
+        <member name="M:PixBB.Core.Utils.PixHttpClient.PatchAsync``1(PixBB.Core.Enumerators.MimeTypes,System.Threading.CancellationToken)">
+            <summary>
+            Realiza o envio de um comando de PATCH para o endereço especificado na <see cref="P:PixBB.Core.Utils.PixHttpClient.UrlBase"/> de forma assíncrona.
+            </summary>
+            <param name="mimeType">Tipo de dados</param>
+            <param name="cancellationToken">Token de notificação de cancelamento de threads gerenciadas.</param>
+            <typeparam name="T">O tipo de dados de retorno</typeparam>
+            <returns>Os dados</returns>
+        </member>
+        <member name="M:PixBB.Core.Utils.PixHttpClient.PatchAsync``1(System.Object,PixBB.Core.Enumerators.MimeTypes,System.Threading.CancellationToken)">
+            <summary>
+            Realiza o envio de um comando de PATCH para o endereço especificado na <see cref="P:PixBB.Core.Utils.PixHttpClient.UrlBase"/> de forma assíncrona.
+            </summary>
+            <param name="obj">O objeto que sera enviado no corpo da requisição</param>
+            <param name="mimeType">Tipo de dados</param>
+            <param name="cancellationToken">Token de notificação de cancelamento de threads gerenciadas.</param>
+            <typeparam name="T">O tipo de dados de retorno</typeparam>
+            <returns>Os dados</returns>
+        </member>
+        <member name="M:PixBB.Core.Utils.PixHttpClient.PutAsync``1(PixBB.Core.Enumerators.MimeTypes,System.Threading.CancellationToken)">
+            <summary>
+            Realiza o envio de um comando de PUT para o endereço especificado na <see cref="P:PixBB.Core.Utils.PixHttpClient.UrlBase"/> de forma assíncrona.
+            </summary>
+            <param name="mimeType">Tipo de dados</param>
+            <param name="cancellationToken">Token de notificação de cancelamento de threads gerenciadas.</param>
+            <typeparam name="T">O tipo de dados de retorno</typeparam>
+            <returns>Os dados</returns>
+        </member>
+        <member name="M:PixBB.Core.Utils.PixHttpClient.PutAsync``1(System.Object,PixBB.Core.Enumerators.MimeTypes,System.Threading.CancellationToken)">
+            <summary>
+            Realiza o envio de um comando de PUT para o endereço especificado na <see cref="P:PixBB.Core.Utils.PixHttpClient.UrlBase"/> de forma assíncrona.
+            </summary>
+            <param name="obj">O objeto que sera enviado no corpo da requisição</param>
+            <param name="mimeType">Tipo de dados</param>
+            <param name="cancellationToken">Token de notificação de cancelamento de threads gerenciadas.</param>
+            <typeparam name="T">O tipo de dados de retorno</typeparam>
+            <returns>Os dados</returns>
+        </member>
+        <member name="M:PixBB.Core.Utils.PixHttpClient.SendAsync(System.Net.Http.HttpMethod,System.Threading.CancellationToken)">
+            <summary>
+            Envia uma solicitação HTTP como uma operação assíncrona.
+            </summary>
+            <param name="httpMethod">O protocolo HTTP</param>
+            <param name="cancellationToken">Token de notificação de cancelamento de threads gerenciadas.</param>
+        </member>
+        <member name="M:PixBB.Core.Utils.PixHttpClient.SendAsync``1(System.Object,System.Net.Http.HttpMethod,PixBB.Core.Enumerators.MimeTypes,System.Threading.CancellationToken)">
+            <summary>
+            Envia uma solicitação HTTP como uma operação assíncrona.
+            </summary>
+            <param name="obj">O objeto que sera enviado no corpo da requisição</param>
+            <param name="httpMethod">O protocolo HTTP</param>
+            <param name="mimeType">Tipo de dados</param> 
+            <param name="cancellationToken">Token de notificação de cancelamento de threads gerenciadas.</param>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:PixBB.Core.Utils.PixHttpClient.CheckIfStatusCodeIsError(System.Net.HttpStatusCode)">
+            <summary>
+            Verifica o status da solicitação.
+            </summary>
+            <param name="responseStatusCode">O status da requisição</param>
+            <returns>Se a solicitação foi bem-sucedida</returns>
+        </member>
+        <member name="M:PixBB.Core.Utils.PixHttpClient.CreateHttpException(System.Net.Http.HttpResponseMessage,System.String,System.Exception)">
+            <summary>
+            Cria uma instancia da exceção do tipo <see cref="T:PixBB.Core.Exceptions.HttpException"/>. 
+            </summary>
+            <param name="response">A Mensagem de resposta, incluindo o código de status e os dados</param>
+            <param name="content">O conteudo da resposta</param>
+            <param name="ex">A exceção original</param>
+            <returns>Uma instancia de <see cref="T:PixBB.Core.Exceptions.HttpException"/></returns>
+        </member>
+        <member name="M:PixBB.Core.Utils.PixHttpClient.GetMineType(PixBB.Core.Enumerators.MimeTypes)">
+            <summary>
+            Retorna o tipo de conteudo(MIME-type) que sera usado na requisição. 
+            </summary>
+            <param name="mimeType">O tipo de conteudo(MIME-type)</param>
+        </member>
+        <member name="T:PixBB.Core.Utils.PixHttpClientHelper">
+            <summary>
+            Contem metodos para utilizar a classe <see cref="T:PixBB.Core.Utils.PixHttpClient"/>.
+            </summary>
+        </member>
+        <member name="M:PixBB.Core.Utils.PixHttpClientHelper.PrepareClient(PixBB.Core.Utils.PixHttpClient,System.String,System.String[])">
+            <summary>
+            Gera a url com a chave do App.
+            </summary>
+            <param name="client"></param>
+            <param name="endPoint">O endpoint da requisição</param>
+            <param name="query">Paramatros que seram adicionados na url</param>
+            <returns>A url pronta pra requisição</returns>
+        </member>
+        <member name="T:PixBB.Core.Utils.PixUrlBase">
+            <summary>
+            Classe que contem as ulr's padrões conforme o ambiente definido.
+            </summary>
+        </member>
+        <member name="F:PixBB.Core.Utils.PixUrlBase.SANDBOX_BASE_URL">
+            <summary>
+            URL padrão do serviço de sandbox.
+            </summary>
+        </member>
+        <member name="F:PixBB.Core.Utils.PixUrlBase.SANDBOX_OAUTH_URL">
+            <summary>
+            URL de autenticação padrão do serviço de sandbox.
+            </summary>
+        </member>
+        <member name="F:PixBB.Core.Utils.PixUrlBase.PRODUCTION_BASE_URL">
+            <summary>
+            Url padrão do serviço de produção.
+            </summary>
+        </member>
+        <member name="F:PixBB.Core.Utils.PixUrlBase.PRODUCTION_OAUTH_URL">
+            <summary>
+            URL de autenticação padrão do serviço de produção.
+            </summary>
+        </member>
+        <member name="M:PixBB.Core.Utils.PixUrlBase.GetBaseUri(PixBB.Core.Enumerators.ApiEnvironment,PixBB.Core.Enumerators.ApiVersion)">
+            <summary>
+            Método que traz a url correta de acordo com a versão e ambiente definidos.
+            </summary>
+            <param name="environment">Ambiente de execução. <see cref="T:PixBB.Core.Enumerators.ApiEnvironment"/></param>
+            <param name="version">Versão da API do PIX</param>
+            <returns></returns>
+        </member>
+        <member name="M:PixBB.Core.Utils.PixUrlBase.GetOauthUri(PixBB.Core.Enumerators.ApiEnvironment)">
+            <summary>
+            Método que traz a url de autenticação correta de acordo com a versão e ambiente definidos.
+            </summary>
+            <param name="environment">Ambiente de execução. <see cref="T:PixBB.Core.Enumerators.ApiEnvironment"/></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
