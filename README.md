@@ -1,5 +1,4 @@
 ## PIXBB Core
-___
 
 Biblioteca de acesso à api **V1** do serviço de pagamento instantâneo brasileiro (PIX) do Banco do Brasil(BB), baseada em .Net
 Standard 2.0.
