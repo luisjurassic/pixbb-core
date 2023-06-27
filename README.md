@@ -28,14 +28,8 @@ Exemplo basico de uso. Para mais exemplos consulte o projeto de testes unitário
     
     var billing = new Billing()
     {
-        Calendar = new Calendar
-        {
-            Expiration = 3600
-        },
-        Price = new Price()
-        {
-            Original = 10
-        },
+        Calendar = new Calendar(3600),
+        Price = new Price(10),
         Key = "7f6844d0-de89-47e5-9ef7-e0a35a681615",
         PayerRequest = "Serviço prestado"
     };
