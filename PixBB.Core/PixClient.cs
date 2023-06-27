@@ -86,6 +86,10 @@ public class PixClient
 
             return false;
         }
+        catch (HttpException ex)
+        {
+            throw new PixException(ex);
+        }
         catch (Exception ex)
         {
             throw new PixException(ex.Message);

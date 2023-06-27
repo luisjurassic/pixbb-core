@@ -155,6 +155,22 @@ public class Calendar
     /// </summary>
     [JsonProperty("expiracao")]
     public int Expiration { get; set; }
+
+    /// <summary>
+    /// Inicializa uma nova instância da classe <see cref="Calendar"/>.
+    /// </summary>
+    public Calendar()
+    {
+    }
+
+    /// <summary>
+    /// Inicializa uma nova instância da classe <see cref="Calendar"/>.
+    /// </summary>
+    /// <param name="expiration">Tempo de vida da cobrança</param>
+    public Calendar(int expiration)
+    {
+        Expiration = expiration;
+    }
 }
 
 /// <summary>
@@ -198,12 +214,33 @@ public class Debtor
     /// </summary>
     [JsonProperty("cpf", DefaultValueHandling = DefaultValueHandling.Ignore)]
     public string Cpf { get; set; }
-    
+
     /// <summary>
     /// Nome do devedor
     /// </summary>
     [JsonProperty("nome")]
     public string Name { get; set; }
+
+    /// <summary>
+    /// Inicializa uma nova instância da classe <see cref="Debtor"/>.
+    /// </summary>
+    public Debtor()
+    {
+    }
+
+    /// <summary>
+    /// Inicializa uma nova instância da classe <see cref="Calendar"/>.
+    /// </summary>
+    /// <param name="doc">CPF ou CNPJ do devedor</param>
+    /// <param name="name">Nome do devedor</param>
+    public Debtor(string doc, string name)
+    {
+        Name = name;
+        if (doc.Length == 11)
+            Cpf = doc;
+        else if (doc.Length == 14)
+            Cnpj = doc;
+    }
 }
 
 /// <summary>
@@ -217,6 +254,22 @@ public class Price
     [JsonProperty("original")]
     [JsonConverter(typeof(DecimalFormatConverter))]
     public decimal Original { get; set; }
+
+    /// <summary>
+    /// Inicializa uma nova instância da classe <see cref="Price"/>.
+    /// </summary>
+    public Price()
+    {
+    }
+
+    /// <summary>
+    /// Inicializa uma nova instância da classe <see cref="Price"/>.
+    /// </summary>
+    /// <param name="price">Valor da cobrança</param>
+    public Price(decimal price)
+    {
+        Original = price;
+    }
 }
 
 /// <summary>

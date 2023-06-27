@@ -533,6 +533,17 @@
             Tempo de vida da cobrança, especificado em segundos a partir da data de criação (Calendario.criacao). Default: 86400
             </summary>
         </member>
+        <member name="M:PixBB.Core.Models.Calendar.#ctor">
+            <summary>
+            Inicializa uma nova instância da classe <see cref="T:PixBB.Core.Models.Calendar"/>.
+            </summary>
+        </member>
+        <member name="M:PixBB.Core.Models.Calendar.#ctor(System.Int32)">
+            <summary>
+            Inicializa uma nova instância da classe <see cref="T:PixBB.Core.Models.Calendar"/>.
+            </summary>
+            <param name="expiration">Tempo de vida da cobrança</param>
+        </member>
         <member name="T:PixBB.Core.Models.Location">
             <summary>
             Classe contendo informações da localização do payload.
@@ -573,6 +584,18 @@
             Nome do devedor
             </summary>
         </member>
+        <member name="M:PixBB.Core.Models.Debtor.#ctor">
+            <summary>
+            Inicializa uma nova instância da classe <see cref="T:PixBB.Core.Models.Debtor"/>.
+            </summary>
+        </member>
+        <member name="M:PixBB.Core.Models.Debtor.#ctor(System.String,System.String)">
+            <summary>
+            Inicializa uma nova instância da classe <see cref="T:PixBB.Core.Models.Calendar"/>.
+            </summary>
+            <param name="doc">CPF ou CNPJ do devedor</param>
+            <param name="name">Nome do devedor</param>
+        </member>
         <member name="T:PixBB.Core.Models.Price">
             <summary>
             Valores monetários referentes à cobrança.
@@ -582,6 +605,17 @@
             <summary>
             Valor original da cobrança.
             </summary>
+        </member>
+        <member name="M:PixBB.Core.Models.Price.#ctor">
+            <summary>
+            Inicializa uma nova instância da classe <see cref="T:PixBB.Core.Models.Price"/>.
+            </summary>
+        </member>
+        <member name="M:PixBB.Core.Models.Price.#ctor(System.Decimal)">
+            <summary>
+            Inicializa uma nova instância da classe <see cref="T:PixBB.Core.Models.Price"/>.
+            </summary>
+            <param name="price">Valor da cobrança</param>
         </member>
         <member name="T:PixBB.Core.Models.AddictionalInfo">
             <summary>
